@@ -38,12 +38,14 @@ export default function Layout(props) {
 
   return (
     <div className="App">
+        {/* 
       <header>
         <h1> PWA</h1>
-        {isReadyForInstall && (
-          <button onClick={downloadApp}> Descargasdasda </button>
-        )}
+          {isReadyForInstall && (
+            <button onClick={downloadApp}> Descargasdasda </button>
+          )}
       </header>
+        */}
 
       <nav>
         <ul>
@@ -51,10 +53,25 @@ export default function Layout(props) {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/acerca">Acerca</Link>
+            <Link to="/products">Productos</Link>
           </li>
           <li>
-            <Link to="/galeria">Galería</Link>
+            <Link to="/galeria">Venta</Link>
+          </li>
+          <li>
+            <Link to="/">Historial</Link>
+          </li>
+          <li>
+            <Link to="/">Calendario</Link>
+          </li>
+          <li>
+            <Link to="/">Usuarios</Link>
+          </li>
+          <li>
+            <Link to="/acerca">Soporte</Link>
+          </li>
+          <li>
+            <Link to="/">Log Out</Link>
           </li>
         </ul>
       </nav>

@@ -122,17 +122,4 @@ const Scanner = ({
     return null;
 }
 
-Scanner.propTypes = {
-    onDetected: PropTypes.func.isRequired,
-    scannerRef: PropTypes.object.isRequired,
-    onScannerReady: PropTypes.func,
-    cameraId: PropTypes.string,
-    facingMode: PropTypes.string,
-    constraints: PropTypes.object,
-    locator: PropTypes.object,
-    numOfWorkers: PropTypes.number,
-    decoders: PropTypes.array,
-    locate: PropTypes.bool,
-};
-
 export default Scanner;

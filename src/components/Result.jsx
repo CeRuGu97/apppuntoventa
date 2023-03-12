@@ -6,8 +6,5 @@ const Result = ({ result }) => (
     </li>
 );
 
-Result.propTypes = {
-    result: PropTypes.object
-};
 
 export default Result;

@@ -13,15 +13,18 @@ export default function AddProduct() {
         <div className='bodySection'>
             <div className='addProduct'>
 
-                Add product 2
-                {results.map((result) => (result.codeResult && Swal.fire(result.codeResult.code)))}
-
+                Add product 3
+                {results.map((result) => (result.codeResult && result.codeResult.code))}
+                {!results && setScanning(!scanning)}
                 <div>
                     <button onClick={() => setScanning(!scanning)}>{scanning ? 'Stop' : 'Start'}</button>
                     <ul className="results">
                         {results.map((result) => (result.codeResult && <Result key={result.codeResult.code} result={result} />))}
                     </ul>
-                    <div ref={scannerRef} style={{ position: 'relative', border: '3px solid red' }}>
+                    <div ref={scannerRef} style={{
+                        position: 'relative',
+                        // border: '3px solid red'
+                        }}>
                         {/* <video style={{ width: window.innerWidth, height: 180, border: '3px solid orange' }}/> */}
                         <canvas className="drawingBuffer" style={{
                             position: 'absolute',
@@ -29,7 +32,7 @@ export default function AddProduct() {
                             // left: '0px',
                             height: '100%',
                             width: '100%',
-                            border: '3px solid green',
+                            // border: '3px solid green',
                         }}
                             width="640" height="480"
                         />

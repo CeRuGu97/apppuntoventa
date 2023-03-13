@@ -1,5 +1,4 @@
 import { useCallback, useLayoutEffect } from 'react';
-import PropTypes from 'prop-types';
 import Quagga from 'quagga';
 
 function getMedian(arr) {
@@ -18,8 +17,8 @@ function getMedianOfCodeErrors(decodedCodes) {
 }
 
 const defaultConstraints = {
-    width: 640,
-    height: 480,
+    width: 300,
+    height: 205,
 };
 
 const defaultLocatorSettings = {

@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 const Result = ({ result }) => (
     <li>
         {result.codeResult.code} [{result.codeResult.format}]

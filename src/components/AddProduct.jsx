@@ -15,6 +15,7 @@ export default function AddProduct() {
 
                 Add product 3
                 {results.map((result) => (result.codeResult && result.codeResult.code))}
+                {results}
                 {!results && setScanning(!scanning)}
                 <div>
                     <button onClick={() => setScanning(!scanning)}>{scanning ? 'Stop' : 'Start'}</button>

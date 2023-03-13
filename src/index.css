@@ -109,7 +109,11 @@ nav ul li a {
   margin: 5px 0 ;
 }
 /* ------------------------------------------ */
-
+/* AddProducts ------------------------------ */
+.bodySection .addProduct video {
+  width: 100%;
+}
+/* ------------------------------------------ */
 @media (max-width: 768px) {
   nav ul {
     flex-wrap: wrap;

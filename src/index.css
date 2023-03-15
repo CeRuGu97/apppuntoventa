@@ -110,7 +110,7 @@ nav ul li a {
 }
 /* ------------------------------------------ */
 /* AddProducts ------------------------------ */
-.bodySection .addProduct video {
+.modal-content .modal-body div video {
   width: 100%;
 }
 .bodySection .addProduct .title {

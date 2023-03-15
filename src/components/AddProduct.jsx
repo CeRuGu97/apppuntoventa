@@ -35,32 +35,30 @@ export default function AddProduct() {
                         <FontAwesomeIcon icon={faCamera} className='icon' />
                     </button>
                 </div>
-                <Formik
-                    initialValues={{ name: results, email: "" }}
-                    onSubmit={async (values) => {
-                        console.log(values);
-                    }}
-                >
-                    <div className="form mt-3">
-                        <div className="form-group row">
-                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                            <Field className="form-control" placeholder="name" name="name" type="text" />
+                {
+                    !!results &&
+                    <Formik
+                        initialValues={{ name: results, email: "" }}
+                        onSubmit={async (values) => {
+                            console.log(values);
+                        }}
+                    >
+                        <div className="form mt-3">
+                            <div className="form-group row">
+                            <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                <Field className="form-control" placeholder="name" name="name" type="text" />
+                            </div>
+                            <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                <Field className="form-control" placeholder="email" name="email" type="text" />
+                            </div>
+                            </div>
+                            <button type="submit" className="btn btn-primary mt-2">Submit</button>
                         </div>
-                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                            <Field className="form-control" placeholder="email" name="email" type="text" />
-                        </div>
-                        </div>
-                        <button type="submit" className="btn btn-primary mt-2">Submit</button>
-                    </div>
-                </Formik>
-
-                <ModalReact show={modal} onHide={handleClose} size="lg">
+                    </Formik>
+                }
+                <ModalReact show={modal} onHide={handleClose} size="lg" centered>
                     <ModalReact.Body>
                         <div>
-                            <ul className="results">
-                                {/* {results.map((result) => (result.codeResult && <Result key={result.codeResult.code} result={result} />))} */}
-                                {results}
-                            </ul>
                             <div ref={scannerRef} style={{
                                 position: 'relative',
                                 // border: '3px solid red'

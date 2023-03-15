@@ -113,6 +113,11 @@ nav ul li a {
 .bodySection .addProduct video {
   width: 100%;
 }
+.bodySection .addProduct .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 /* ------------------------------------------ */
 @media (max-width: 768px) {
   nav ul {

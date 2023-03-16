@@ -41,35 +41,39 @@ export default function AddProduct() {
                         initialValues={{
                             code: results,
                             nombreProducto: "",
-                            precioCompra: "1",
-                            precioVenta: "1",
-                            stock: "1",
+                            precioCompra: "",
+                            precioVenta: "",
+                            stock: "",
                         }}
                         onSubmit={async (values) => {
                             console.log(values);
-                            alert(JSON.stringify(values));
+                            window.alert(JSON.stringify(values));
+                            setScanning(false);
                         }}
                     >
-                        <div className="form mt-3">
-                            <div className="form-group row">
-                                <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                                    <Field className="form-control" placeholder="code" name="code" type="text" />
+                        {
+                            Formik =>
+                                <div className="form mt-3">
+                                    <div className="form-group row">
+                                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                            <Field className="form-control" placeholder="code" name="code" type="text" />
+                                        </div>
+                                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                            <Field className="form-control" placeholder="Nombre de producto" name="nombreProducto" type="text" />
+                                        </div>
+                                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                            <Field className="form-control" placeholder="Precio compra" name="precioCompra" type="text" />
+                                        </div>
+                                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                            <Field className="form-control" placeholder="Precio venta" name="precioVenta" type="text" />
+                                        </div>
+                                        <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
+                                            <Field className="form-control" placeholder="stock" name="stock" type="text" />
+                                        </div>
+                                    </div>
+                                    <button type="button" onClick={Formik.handleSubmit} className="btn btn-primary mt-2">Submit</button>
                                 </div>
-                                <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                                    <Field className="form-control" placeholder="Nombre de producto" name="nombreProducto" type="text" />
-                                </div>
-                                <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                                    <Field className="form-control" placeholder="Precio compra" name="precioCompra" type="text" />
-                                </div>
-                                <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                                    <Field className="form-control" placeholder="Precio venta" name="precioVenta" type="text" />
-                                </div>
-                                <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3 mt-2'>
-                                    <Field className="form-control" placeholder="stock" name="stock" type="text" />
-                                </div>
-                            </div>
-                            <button type="submit" className="btn btn-primary mt-2">Submit</button>
-                        </div>
+                        }
                     </Formik>
                 }
                 <ModalReact show={modal} onHide={handleClose} size="lg" centered>
@@ -90,7 +94,7 @@ export default function AddProduct() {
                                 }}
                                     width="640" height="480"
                                 />
-                                {scanning ? <Scanner scannerRef={scannerRef} onDetected={(result) => { setResults(result); setScanning(!scanning); scanningOpen(); }} /> : null}
+                                {scanning ? <Scanner scannerRef={scannerRef} onDetected={(result) => { setResults(result); setScanning(false); scanningOpen(); }} /> : null}
                             </div>
                         </div>
                     </ModalReact.Body>

@@ -1,18 +1,27 @@
-import { Layout, Home, About, Products, AddProduct } from "./components";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Home from './pages/Home';
+import Sales from './pages/Sales';
+import Purchases from './pages/Purchases';
+import './App.scss';
 
-function App() {
-  // Botón de descarga en Layout
+const App = () => {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="products" element={<Products />} />
-        <Route path="products/addProduct" element={< AddProduct/>} />
-        <Route path="acerca" element={<About />} />
-      </Routes>
-    </Layout>
+    <BrowserRouter>
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sales" element={<Sales />} />
+            <Route path="/purchases" element={<Purchases />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

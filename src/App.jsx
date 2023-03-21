@@ -9,10 +9,10 @@ import './App.scss';
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <div className="flex">
         <Sidebar />
-        <div className="content">
+        <div className="content w-100">
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sales" element={<Sales />} />

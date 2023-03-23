@@ -3,7 +3,7 @@ import Scanner from './Scanner';
 import { Modal as ModalReact } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
-import { Formik, Field, Form } from "formik";
+import { Formik, Field } from "formik";
 
 export default function AddProduct() {
 
@@ -76,8 +76,8 @@ export default function AddProduct() {
                         }
                     </Formik>
                 }
-                <ModalReact show={modal} onHide={handleClose} size="lg" centered>
-                    <ModalReact.Body>
+                    {
+                        modal &&
                         <div>
                             <div ref={scannerRef} style={{
                                 position: 'relative',
@@ -97,9 +97,7 @@ export default function AddProduct() {
                                 {scanning ? <Scanner scannerRef={scannerRef} onDetected={(result) => { setResults(result); setScanning(false); scanningOpen(); }} /> : null}
                             </div>
                         </div>
-                    </ModalReact.Body>
-                </ModalReact>
-
+                    }
             </div>
         </div>
     );

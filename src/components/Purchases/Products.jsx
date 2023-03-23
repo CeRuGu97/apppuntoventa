@@ -38,7 +38,7 @@ export default function Products() {
         <h3>Lista de productos</h3>
         <div className='btnActions'>
           <button type="button" className="btn btn-primary">
-            <Link to="addProduct">
+            <Link to="/sales/addProduct">
               Agregar producto <FontAwesomeIcon icon={faPlus} />
             </Link>
           </button>

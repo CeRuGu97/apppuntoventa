@@ -1,7 +1,9 @@
+import Products from "../components/Purchases/Products";
+
 const Sales = () => {
   return (
     <div>
-      <p>Sales</p>
+      <Products/>
     </div>
   );
 };

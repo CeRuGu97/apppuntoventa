@@ -10,10 +10,10 @@ import AddProduct from './components/Purchases/AddProduct';
 const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <div className="flex">
         <Sidebar />
         <div className="content w-100">
-          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sales" element={<Sales />} />

@@ -25,7 +25,7 @@ const CustomNavbar = (args) => {
           <Nav className="ms-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Edgar Jimenez Galicia
+                Cesar
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>Mi perfil</DropdownItem>

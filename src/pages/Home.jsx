@@ -1,7 +1,9 @@
+import Users from '../components/Home/Users'
+
 const Home = () => {
   return (
     <div>
-      <p>Home</p>
+      <Users />
     </div>
   );
 };

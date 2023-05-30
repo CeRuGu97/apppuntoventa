@@ -38,6 +38,17 @@ const Sidebar = () => {
             Compras
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/products"
+            exact
+            className="text-dark rounded py-2 w-100 d-inline-block px-3"
+            activeClassName="active"
+          >
+            <Icon.FaProductHunt className="me-2" />
+            Productos
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

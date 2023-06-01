@@ -62,7 +62,7 @@ $gray: #e7e9eb;
 .bodySection .products .btnActions button a{
   color: var(--just-white);
 }
-.bodySection .products .table table{
+.bodySection .products .table table, .bodySection .table table{
   width: 100%;
   margin-top: 30px;
 }
@@ -71,8 +71,9 @@ $gray: #e7e9eb;
   flex-direction: row;
   justify-content: center;
 }
-.bodySection .products .table table tbody tr td{
+.bodySection .products .table table tbody tr td, .bodySection .table table tbody tr td{
   margin: 5px 0 ;
+  padding: 2px 0;
 }
 /* ------------------------------------------ */
 /* AddProducts ------------------------------ */
@@ -83,6 +84,17 @@ $gray: #e7e9eb;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+/* ------------------------------------------ */
+.addProductSales{
+  display: flex;
+  justify-content: space-around;
+}
+.addProductSales input {
+  margin-right: 10px;
+}
+.saleBtnAction {
+  margin-right: 5px;
 }
 /* ------------------------------------------ */
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrash, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faTrash, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Modal as ModalReact } from "react-bootstrap";
 import { Formik, Field } from "formik";
 
@@ -30,6 +30,7 @@ const Users = () => {
             }
         })
     }
+    
     return (
         <div className='bodySection'>
             <div className='products'>
